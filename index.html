@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fuel School</title>
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Fuel School</div>
+
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#menu">Menú</a>
+      <a href="#carrito">Carrito</a>
+      <a href="#reservas">Reservas</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+
+    <div class="hero-text">
+      <h1>Compra comida sin hacer filas</h1>
+
+      <p>
+        Fuel School permite a los estudiantes comprar comida,
+        revisar inventario y reservar pedidos desde el celular.
+      </p>
+
+      <a href="#menu" class="btn">Ver menú</a>
+    </div>
+
+    <div class="hero-image">
+      🍔
+    </div>
+
+  </section>
+
+  <!-- SOBRE -->
+  <section class="about">
+
+    <h2>¿Qué es Fuel School?</h2>
+
+    <p>
+      Fuel School es una plataforma diseñada para reducir las
+      filas en la soda estudiantil mediante compras y reservas
+      digitales.
+    </p>
+
+  </section>
+
+  <!-- MENU -->
+  <section class="menu" id="menu">
+
+    <h2>Menú disponible</h2>
+
+    <div class="products">
+
+      <div class="card">
+        <div class="emoji">🍕</div>
+        <h3>Pizza</h3>
+        <p>₡1200</p>
+        <button onclick="agregarCarrito('Pizza',1200)">
+          Agregar
+        </button>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🍔</div>
+        <h3>Hamburguesa</h3>
+        <p>₡2500</p>
+        <button onclick="agregarCarrito('Hamburguesa',2500)">
+          Agregar
+        </button>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🥤</div>
+        <h3>Refresco</h3>
+        <p>₡800</p>
+        <button onclick="agregarCarrito('Refresco',800)">
+          Agregar
+        </button>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🍟</div>
+        <h3>Papas</h3>
+        <p>₡1500</p>
+        <button onclick="agregarCarrito('Papas',1500)">
+          Agregar
+        </button>
+      </div>
+
+    </div>
+
+  </section>
+
+ <!-- BOTON DEL CARRITO -->
+<div class="cart-icon" onclick="abrirCarrito()">
+  🛒
+  <span id="contador-carrito">0</span>
+</div>
+
+<!-- PANEL DEL CARRITO -->
+<div class="cart-panel" id="cart-panel">
+
+  <div class="cart-header">
+    <h2>Tu carrito</h2>
+    <button onclick="cerrarCarrito()">X</button>
+  </div>
+
+  <div id="cart-items"></div>
+
+  <h3 id="total">Total: ₡0</h3>
+
+  <button class="buy-btn" onclick="finalizarCompra()">
+    Finalizar compra
+  </button>
+
+</div>
+  <!-- RESERVAS -->
+  <section class="reservas" id="reservas">
+
+    <h2>Reserva tu comida</h2>
+
+    <form>
+
+      <input type="text" placeholder="Nombre del estudiante" required>
+
+      <input type="text" placeholder="Sección" required>
+
+      <select required>
+        <option>Selecciona una comida</option>
+        <option>Pizza</option>
+        <option>Hamburguesa</option>
+        <option>Refresco</option>
+      </select>
+
+      <input type="time" required>
+
+      <button type="submit">
+        Confirmar reserva
+      </button>
+
+    </form>
+
+  </section>
+
+    </table>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <h3>Fuel School</h3>
+
+    <p>
+      Proyecto realizado por Lyan Alfaro y José Corrales
+    </p>
+
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
